@@ -73,7 +73,6 @@ function App() {
   };
 
   const handleChallengeFriend = async () => {
-    const element = document.getElementById("game-screen");
     const inviteLink = `${window.location.origin}/?inviter=${username}&correct=${score.correct}&incorrect=${score.incorrect}`;
     const whatsappMessage = `Hey! I scored ${score.correct} correct on Globetrotter. Beat me if you can! ${inviteLink}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
