@@ -3,7 +3,6 @@ import Confetti from "react-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import { destinations } from "./assets/destinations";
 import html2canvas from "html2canvas";
-import useSound from "use-sound";
 import "./App.css";
 
 function App() {
@@ -77,7 +76,6 @@ function App() {
   const handleChallengeFriend = async () => {
     const element = document.getElementById("game-screen");
     const canvas = await html2canvas(element);
-    const imageUrl = canvas.toDataURL("https://www.shutterstock.com/image-photo/travel-world-monument-concept-2533906529");
     const inviteLink = `${window.location.origin}/?inviter=${username}&correct=${score.correct}&incorrect=${score.incorrect}`;
     const whatsappMessage = `Hey! I scored ${score.correct} correct on Globetrotter. Beat me if you can! ${inviteLink}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
